@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ex5v1 {
+//    COUNT DUPLICATE ElEMENTS
     static int count(boolean isTrue){
         int count=0;
         while(isTrue)

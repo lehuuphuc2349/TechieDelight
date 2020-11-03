@@ -43,6 +43,13 @@ public class ex9 {
 //                    arr1.pushBack();
             }
         }
+        byte malloc[] = new byte[arr1.length];
+    }
+    static void addMalloc(int arr1[], int arr2[]){
+        int sizeof = arr1.length;
+        int size = arr2.length;
+        int len=0;
+        int endIndex=-1;
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

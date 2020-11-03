@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class ex9 {
     static void Solve(int arr1[],int arr2[]){
@@ -31,6 +28,21 @@ public class ex9 {
             tempArr[i]+=arr2[k++];
         }
         System.out.println(Arrays.toString(tempArr));
+        Map<Integer,Integer> map = new HashMap<>();
+        map.put(0,1);
+    }
+    static void app(int arr1[],int arr2[]){
+        List<Integer> list = new LinkedList<>();
+        for(int i=0; i < arr1.length; i++) {
+            for(int j = i + 1; j < arr1.length ;j++){
+                if(arr1[i] == arr2[j]) {
+                    System.out.println("FAIL");
+                }
+                else
+                    System.out.println("TRUE");
+//                    arr1.pushBack();
+            }
+        }
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

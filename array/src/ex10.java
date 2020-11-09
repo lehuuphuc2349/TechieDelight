@@ -24,7 +24,7 @@ public class ex10 {
         }
         System.out.println("INPUT SIZE OF THE ARRAY2:");
         int size2 = input.nextInt();
-        System.out.printf("INPUT ELEMENT OF THE ARRAY2:");
+        System.out.println("INPUT ELEMENT OF THE ARRAY2:");
         int arr2[] = new int[size2];
         for(int i=0; i<size2;i++){
             arr2[i]=input.nextInt();

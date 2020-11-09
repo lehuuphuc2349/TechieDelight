@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class ex15 {
     static double number = 1e10;
+    static double numberTo12 = 1e12;
     static void swap(int arr[], int i, int j){
         int temp = arr[i];
         arr[i] = arr[j];

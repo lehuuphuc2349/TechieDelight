@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ex25 {
+//    Kanade
     static int Solve(int arr[]){
         int maxSoFar=0;
         int maxEndingHere=0;

@@ -23,7 +23,7 @@ public class ex29 {
         System.out.println("The longest sequence has length: "
                 + window + " from index " + leftIndex + " to " + (leftIndex+window-1));
     }
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("INPUT SIZE OF THE ARRAY:");
         int size = input.nextInt();

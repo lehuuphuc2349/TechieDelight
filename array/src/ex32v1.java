@@ -16,6 +16,16 @@ public class ex32v1 {
         }
         return false;
     }
+    static void Sort(int arr[], int temp, int i, int j){
+        if(i==j){
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+        else {
+            return;
+        }
+    }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("INPUT SIZE OF THE ARRAY:");

@@ -1,7 +1,5 @@
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
+
 public class ex40 {
     static double[] merge(double arrial[], double departure[]){
         double mergeArr[] = new double[arrial.length+departure.length];
@@ -13,6 +11,22 @@ public class ex40 {
         }
         Arrays.sort(mergeArr);
         return mergeArr;
+    }
+    static void add(int arrial[], int departure[]){
+        int newArrial=0;
+        for(int i=0; i< arrial.length; i++){
+            for(int j=i+1; j<departure.length; j++){
+                if(arrial[i]==departure[j-1]){
+                    double result = Math.max((arrial[i+1]-2*3), departure[j-1]*2+3);
+                    double temp=0;
+                    if(result>temp){
+                        temp=result;
+                        result=arrial[i+1]*2;
+                        System.out.println(result==1?1:-1);
+                    }
+                }
+            }
+        }
     }
     static void Solve(double arrial[], double departure[]){
         int count=0;
@@ -31,7 +45,16 @@ public class ex40 {
                count--;
            }
         }
-
+        Iterator<Double> itr = vector.iterator();
+        if(itr.hasNext()){
+            System.out.println(itr);
+        }
+//        Set<Double> set = new HashSet<>();
+//        Iterator<Double> setItr = set.iterator();
+//        Stack<Double> stack = new Stack<>();
+//        stack.push(arrial[0]);
+//        stack.pop();
+//        Queue<Double> queue = new PriorityQueue<>();
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

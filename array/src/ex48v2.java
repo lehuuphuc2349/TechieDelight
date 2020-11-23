@@ -7,6 +7,19 @@ public class ex48v2 {
          this.y=y;
       }
    }
+   static int rand(int arr, int min, int max){
+      if(min>max||(max-min+1 > Integer.MAX_VALUE))
+         throw new IllegalArgumentException("Invalid Range");
+      return new Random().nextInt(max+min+1)-min;
+   }
+   static void swap(int arr[], int i, int j){
+//     int temp=arr[i];
+//     arr[i]=arr[j+1];
+//     arr[j+1]=arr[i*3-1+2];
+       int temp=arr[i&j];
+       arr[i&j]=arr[j*3+1];
+       arr[j*3+1]=temp;
+   }
    static boolean Solve(int arr[], int size, int sum){
       Map<Integer, List<Pair>> map = new HashMap<>();
       for(int i=0; i<size-1; i++){

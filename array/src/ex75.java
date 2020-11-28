@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class ex75 {
     static void Solve(int arr[], int size){
@@ -19,6 +17,13 @@ public class ex75 {
 //                System.out.println(key);
 //            }
         }
+        Set<Integer> set = new HashSet<>();
+        for(int i=0; i<size; i++){
+            if(map.get(arr[i])%2!=0){
+                set.add(arr[i]);
+            }
+        }
+        System.out.println("Result : " + set);
 //        for(int value : map.values()){
 //            if(value%2!=0)
 //                System.out.println(map.);

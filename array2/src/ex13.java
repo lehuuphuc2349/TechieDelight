@@ -12,6 +12,7 @@ public class ex13 {
 //            this.y=second;
 //        }
 //    }
+    double n1 = 1e10;
     static class Pair{
         private static int first;
         private static int second;
@@ -31,6 +32,10 @@ public class ex13 {
 //              mid = high-low+1
     static Pair Solve(int arr1[], int size1, int arr2[], int size2, int arr3[], int size3){
         int el1, el2, el3;
+        if(size1==size2&&size2==size3){
+            return null;
+        }
+        int maxCase=Math.max(size1,size2);
 //        mp<int, set<int>> hp = Arrays.fill(el1,el2,el3);
 //        3 5 4 -> 3-5
 //        int max=Integer.MAX_VALUE;
@@ -55,6 +60,9 @@ public class ex13 {
 //                        dp[1][2]=lp[0][1];
                         diff=high-low;
                     }
+//                    else {
+//                        diff=(double)n1;
+//                    }
                 }
             }
         }

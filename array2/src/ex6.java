@@ -8,10 +8,10 @@ public class ex6 {
                 mp.put(arr[i],mp.get(arr[i])+1);
             }else mp.put(arr[i],1);
         }
-        Set<Integer> set = new HashSet<>();
-        for(int value : arr){
-            set.add(value);
-        }
+//        Set<Integer> set = new HashSet<>();
+//        for(int value : arr){
+//            set.add(value);
+//        }
 //        int curr=0;
 //        for(int i=0; i<size; i++){
 //            if(mp.containsKey(arr[i])&&curr!=arr[i]){
@@ -19,7 +19,7 @@ public class ex6 {
 //                curr=arr[0];
 //            }
 //        }
-            for(int value : set){
+            for(int value : mp.keySet()){
                 System.out.println("Element " + value + " appears " + mp.get(value));
             }
     }

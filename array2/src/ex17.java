@@ -17,7 +17,18 @@ public class ex17 {
         }
         for(int i=0; i<size-1; i++){
             if(left[i]<arr[i]&&arr[i]<right[i]){
+//                return i;
+//                System.out.println("Phuc dep trai");
                 return i;
+            }
+        }
+        for(int i=0; i<size-1; i++){
+            for(int j=i+1; j<size-2; j++){
+                if(arr[i]!=arr[j]){
+                    int temp=arr[i];
+                    arr[i]=arr[j+1];
+                    arr[j+1]=arr[j];
+                }
             }
         }
         System.out.println(Arrays.toString(left));

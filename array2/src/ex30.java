@@ -1,14 +1,20 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-public class ex28 {
-//    4 3 6 2 6 4 2 3 4 3 3
-//     => mp[4,1] => mp[4,get()+1]
-/*      1 1 1 1 1
-*       1 2 3 4 5 => 1 2 3 4 5, => 2 3 4 5, 3 6 10 15, 4 10 20 35, 5 15 35 70
-*       1 3 6 10 15
-*       1 4 10 20 35
-*       1 5 15 35 70
-* */
+public class ex30 {
+    static class pair{
+        private int first;
+        private int second;
+        pair(int x, int y){
+            this.first=x;
+            this.second=y;
+        }
+        @Override
+        public String toString() {
+            return first +  " " + second;
+        }
+    }
     static void Solve(int arr[], int size){
         Map<Integer,Integer> mp = new HashMap<>();
         for(int i=0; i<size; i++){
@@ -16,17 +22,9 @@ public class ex28 {
                 mp.put(arr[i],mp.get(arr[i])+1);
             }else mp.put(arr[i],1);
         }
-        System.out.println(mp.size());
-        System.out.println("Result:");
-//        System.out.println(mp);
-//        Set<Integer> set = new HashSet<>();
-//        for(int i=0; i<size; i++){
-//            if(mp.get(arr[i])%2!=0){
-//                set.add(arr[i]);
-//            }
-//        }
+        System.out.println("Result: ");
         for(int value : mp.keySet()){
-            if(mp.get(value)%2!=0)
+            if(mp.get(value)%2==1)
                 System.out.print(value + " ");
         }
         System.out.println();

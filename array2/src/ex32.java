@@ -1,12 +1,11 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class ex21v1 {
-    static void Solve(int arr[], int size){
-        int xor=0;
-        for(int value : arr){
-            xor=xor^value;
-        }
-        System.out.println("Result : " + xor);
+public class ex32 {
+    static void Solve(int arr[], int size, int k){
+        Arrays.sort(arr);
+        int result = arr[k-1];
+        System.out.println("Result is a: " + result);
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -17,6 +16,8 @@ public class ex21v1 {
         for(int i=0; i<size; i++){
             arr[i] = in.nextInt();
         }
-        Solve(arr,size);
+        System.out.println("Enter k :");
+        int k = in.nextInt();
+        Solve(arr,size,k);
     }
 }

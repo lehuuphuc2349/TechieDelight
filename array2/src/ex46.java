@@ -15,8 +15,18 @@ public class ex46 {
                 break;
             }
         }
+        if(first==0&&last==0){
+            System.out.println("No Found");
+            return;
+        }
         System.out.println("First occur: " + first+ " , Last occur: " + last);
     }
+//    static class Node implements Comparable {
+//        int value, index, listSum;
+//        Node(int value, int index, int listSUm){
+//
+//        }
+//    }:
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter size of the array:");

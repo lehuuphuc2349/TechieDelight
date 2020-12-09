@@ -1,32 +1,35 @@
 import java.util.Scanner;
 
 public class ex46 {
-    static void Solve(int arr[], int size, int number){
-        int k=0, first=0, last=size-1;
-        while(true){
-            if(arr[++k]==number){
-                first=k;
-                break;
-            }
-        }
-        while(k++<size-1){
-            if(arr[k]!=number){
-                last=k-1;
-                break;
-            }
-        }
-        if(first==0&&last==0){
-            System.out.println("No Found");
-            return;
-        }
-        System.out.println("First occur: " + first+ " , Last occur: " + last);
-    }
-//    static class Node implements Comparable {
 //        int value, index, listSum;
 //        Node(int value, int index, int listSUm){
 //
 //        }
 //    }:
+    static void Solve(int arr[], int size, int number){
+        int left=0, right=size-1;
+        int mid=(left+right)>>1;
+        int first=0, last=0;
+        while(left<size-1){
+            if(arr[left]==number){
+                first=left;
+                break;
+            }
+            left++;
+        }
+        while(right>0){
+            if(arr[right]==number){
+                last=right;
+                break;
+            }
+            right--;
+        }
+        if(first==0&&last==0){
+            System.out.println("Element Not Found!");
+            return;
+        }
+        System.out.println(first+","+last);
+    }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter size of the array:");

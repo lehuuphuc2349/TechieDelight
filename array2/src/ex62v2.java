@@ -10,9 +10,12 @@ public class ex62v2 {
             return false;
 //        String key=n+"|"+ 1 2 1 2 3 1 2 1 3 2 1 1 2
         String key=size+"|"+sum;
-        for(int i=0; i<size; i++){
-        
+        if(!mp.containsKey(key)){
+            boolean include=Solve(arr,size-1,sum-arr[size],mp);
+            boolean exculde=Solve(arr,size-1,sum,mp);
+            mp.put(key,include||exculde);
         }
+        return mp.get(key);
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -23,5 +26,9 @@ public class ex62v2 {
         }
         int sum = in.nextInt();
         Map<String, Boolean> mp = new HashMap<>();
+        if(Solve(arr,size-1,sum,mp))
+            System.out.println("yes");
+        else
+            System.out.println("no");
     }
 }

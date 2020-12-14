@@ -17,6 +17,13 @@ public class ex58 {
         while(i<0&&arr[i]==arr[i+1]){
             i++;
         }
+//        int k=arr.length-1;
+//        while(arr[i+1]+arr[i]!=0&&k>0){
+//           arr[i+1]=arr[0];
+//           arr[0]=arr[i+2];
+//           arr[i+2]=arr[i+1];
+//           k--;
+//        }
         Solve(arr,dq,i-1);
     }
     public static void main(String[] args) {

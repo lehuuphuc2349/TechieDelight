@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TechieDelight.iml" filepath="$PROJECT_DIR$/.idea/TechieDelight.iml" />
       <module fileurl="file://$PROJECT_DIR$/array/array.iml" filepath="$PROJECT_DIR$/array/array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/array2/array2.iml" filepath="$PROJECT_DIR$/array2/array2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/array3/array3.iml" filepath="$PROJECT_DIR$/array3/array3.iml" />
     </modules>
   </component>
 </project>

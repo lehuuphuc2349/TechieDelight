@@ -8,7 +8,6 @@ public class ex38 {
             this.listnum=listnum;
             this.index=index;
         }
-
         public int getValue() {
             return value;
         }
@@ -20,7 +19,6 @@ public class ex38 {
         public int getIndex() {
             return index;
         }
-
         @Override
         public int compareTo(Object o) {
             Node node = (Node) o;
